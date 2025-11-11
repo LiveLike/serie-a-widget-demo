@@ -1,0 +1,189 @@
+lg-image-poll {
+  background: #fff;
+  border-radius: 16px;
+}
+lg-image-poll livelike-widget-root {
+  margin-bottom: 0;
+}
+
+lg-image-poll livelike-widget-root livelike-widget-header {
+  margin-top: -8px;
+  display: flex;
+}
+
+lg-image-poll livelike-widget-root livelike-widget-header livelike-title {
+  padding: 16px;
+  margin-top: -8px;
+  width: 93%;
+}
+
+lg-image-poll livelike-widget-body {
+  background: var(--brand-primary-background);
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid var(--brand-widget-border);
+  border-top: 0;
+}
+
+lg-image-poll livelike-widget-body[disabled] {
+  border-radius: 0 0 8px 8px;
+  border: 0.5px solid var(--brand-widget-border);
+  border-top: none;
+}
+
+lg-image-poll livelike-select {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 0;
+  color: #000;
+}
+lg-image-poll livelike-select[disabled] {
+  border: none;
+}
+
+lg-image-poll livelike-image img {
+  height: 50px;
+  width: 50px;
+}
+
+lg-image-poll livelike-option {
+  box-shadow: 0 0 0 1px transparent inset;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0;
+  background: #F8F4F1;
+  overflow: hidden;
+  height: 50px;
+  padding-right: 10px;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+lg-image-poll livelike-option[selected] {
+  border-radius: 8px;
+  border: 2px solid #225696;
+  opacity: 1;
+}
+
+lg-image-poll livelike-option .livelike-voting-image-container {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2px;
+  flex-direction: row;
+}
+lg-image-poll
+  livelike-option
+  .livelike-voting-image-container
+  livelike-description {
+  font-size: 14px;
+  color: #02235C;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0;
+}
+lg-image-poll livelike-option .livelike-voting-image-container livelike-description[selected],
+lg-image-poll livelike-option .livelike-voting-image-container livelike-percentage[selected] {
+  opacity: 1;
+}
+lg-image-poll
+  livelike-option
+  .livelike-voting-image-container
+  livelike-percentage {
+  font-style: normal;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0;
+}
+lg-image-poll livelike-option livelike-image img {
+  height: 50px;
+  width: 50px;
+}
+lg-image-poll livelike-option[disabled] .livelike-voting-image-container {
+  align-items: center;
+  margin-bottom: 0;
+}
+lg-image-poll livelike-option .livelike-voting-image-container {
+  color: #1a2235;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 8;
+  line-height: normal;
+}
+
+lg-image-poll livelike-option livelike-progress {
+  border-radius: 0px;
+  background: #00E8DA;
+  height: 4px;
+  bottom: 0;
+}
+
+lg-image-poll livelike-footer {
+  overflow: hidden;
+  background: transparent;
+  padding: 24px 16px;
+}
+
+lg-image-poll livelike-footer {
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+lg-image-poll livelike-footer .widget-button {
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: capitalize;
+      background: linear-gradient(92deg, #225696 1.91%, #0D8EFE 98.01%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+lg-image-poll livelike-footer .widget-button:disabled {
+  background: linear-gradient(92deg, #225696 1.91%, #0D8EFE 98.01%);
+  color: white;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+lg-image-poll livelike-footer .widget-button.widget-expired {
+  background: var(--brand-disabled);
+  color: var(--brand-tabs-border-bottom-color);
+}
+
+lg-image-poll livelike-footer .widget-button.option-selected:not(:disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+lg-image-poll livelike-image {
+  z-index: 1;
+}
+
+lg-image-poll livelike-footer .widget-button[interactedExpire] {
+  background: var(--brand-tabs-border-bottom-color);
+  color: var(--white);
+}

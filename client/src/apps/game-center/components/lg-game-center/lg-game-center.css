@@ -1,0 +1,259 @@
+:host {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.lit:hover {
+  filter: drop-shadow(0 0 2em #325cffaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+::slotted(h1) {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+lg-game-center .game-center lg-match button,
+lg-timeline button,
+lg-leaderboard button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Bai Jamjuree";
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+lg-match button:hover,
+lg-timeline button:hover,
+lg-leaderboard button:hover {
+  border-color: var(--brand-primary);
+}
+
+lg-match button[disabled]:hover,
+lg-timeline button[disabled]:hover,
+lg-leaderboard button[disabled]:hover {
+  border-color: var(--brand-disabled);
+}
+
+lg-match button:focus,
+lg-timeline button:focus,
+lg-leaderboard button:focus,
+lg-match button:focus-visible,
+lg-timeline button:focus-visible,
+lg-leaderboard button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  a:hover {
+    color: #747bff;
+  }
+
+  lg-match button,
+  lg-timeline button,
+  lg-leaderboard button {
+    background-color: #f9f9f9;
+  }
+}
+
+.tabs-header {
+  display: none;
+  justify-content: space-evenly;
+  border-radius: 6px;
+  background: white;
+  padding: 6px;
+  margin: 0px 8px 12px 8px;
+}
+
+.tabs-header .tab-selected {
+  background: var(--brand-primary);
+  color: white;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.tabs-header button {
+  color: var(--brand-primary);
+  border: none;
+  background: inherit;
+  font-style: normal;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 6px;
+  font-family: "Bai Jamjuree";
+  white-space: nowrap;
+}
+
+.coming-soon {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  color: black;
+  border-radius: 8px;
+}
+
+.logout-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.logout-modal {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 4px;
+  background: var(--brand-chat-delete-modal-background);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logout-modal-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-modal-title {
+  color: var(--white);
+  text-align: center;
+  font-family: "Bai Jamjuree";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.logout-modal-content {
+  width: 100%;
+}
+
+.logout-modal-message {
+  margin: 0px;
+  color: var(--white);
+  text-align: center;
+  font-family: Bai Jamjuree;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.logout-modal-actions {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  color: var(--white);
+  text-align: center;
+  font-family: Bai Jamjuree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.logout-modal-button {
+  color: #fff;
+  text-align: center;
+  font-family: Bai Jamjuree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  border: none;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+
+.logout-modal-button.cancel-button {
+  background: var(--brand-tabs-border-bottom-color);
+  color: #fff;
+}
+
+.logout-modal-button.cancel-button:hover {
+  background: #2e2e2e;
+  transform: translateY(-2px);
+}
+
+.logout-modal-button.confirm-button {
+  background: var(--brand-widget-button);
+  color: white;
+}
+
+.logout-modal-button.confirm-button:hover {
+  background: #b52840;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

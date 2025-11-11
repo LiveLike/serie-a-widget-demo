@@ -1,0 +1,375 @@
+lg-timeline {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: calc(100dvh - 48px);
+  flex-grow: 1;
+  overflow: auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background: var(--brand-tabs-background-color);
+  padding: 0px 4px;
+}
+lg-timeline::-webkit-scrollbar {
+  display: none;
+}
+
+livelike-widgets {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 15px;
+  gap: 24px;
+  overflow-y: scroll;
+}
+
+livelike-widget-root {
+  color: var(--brand-quaternary-background);
+  width: 100%;
+}
+
+livelike-load-more-button .livelike-load-more-button {
+  background: var(--brand-widget-button);
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  font-family: "Bai Jamjuree";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 60px;
+}
+
+.livelike-load-more-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+livelike-title {
+  color: #02235C;
+  font-family: "Bai Jamjuree";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  padding: 0px 16px 16px 0px;
+  width: 93%;
+}
+
+livelike-widget-header {
+  background: none;
+}
+
+livelike-select {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 0;
+  color: #000;
+}
+
+livelike-option {
+  background-color: var(--brand-ternary-background);
+  flex-direction: row-reverse;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+
+livelike-option .livelike-voting-image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+lg-image-prediction livelike-description,
+livelike-image-poll livelike-description,
+lg-prediction-followup-widget livelike-description {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+  text-align: left;
+}
+
+livelike-image-poll .livelike-voting-image-container livelike-progress {
+  top: unset;
+  height: 4px;
+  bottom: -2px;
+  background: var(--brand-text);
+  border-radius: 0;
+}
+
+livelike-footer .voted-text {
+  display: none;
+}
+
+img[height="80px"][width="80px"] {
+  height: 40px;
+  width: 40px;
+}
+
+livelike-percentage {
+  font-family: var(--secondary-font);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  padding: 0 0 5px 0px;
+  opacity: 0.8;
+}
+
+livelike-select.image-grid {
+  display: flex;
+  width: 100%;
+}
+
+livelike-cheer-meter livelike-option {
+  width: 100%;
+  justify-content: center;
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  background-color: unset;
+}
+
+.image-grid livelike-option:nth-child(2) {
+  margin-left: 20px;
+}
+
+livelike-vote-count {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 50px;
+  border: 1px solid var(--brand-text);
+  background: var(--brand-secondary-background);
+  color: var(--brand-text);
+  display: flex;
+  justify-content: center;
+}
+
+livelike-cheer-meter .cheer-image-body livelike-vote-count {
+  font-size: 24px;
+  padding: 5px;
+  top: 35%;
+}
+
+livelike-cheer-meter livelike-option[selected],
+livelike-cheer-meter livelike-option {
+  border-color: unset;
+  background-color: unset;
+  border: unset;
+  transition: unset;
+  padding: unset;
+}
+
+livelike-widgets .widget-styles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 600px;
+}
+
+lg-prediction-followup-widget
+  .livelike-voting-image-container
+  livelike-progress,
+livelike-image-prediction .livelike-voting-image-container livelike-progress,
+livelike-image-prediction-follow-up
+  .livelike-voting-image-container
+  livelike-progress {
+  top: unset;
+  height: 4px;
+  bottom: -2px;
+  background: var(--brand-text);
+  border-radius: 0;
+}
+
+livelike-description[image] {
+  padding: 0px;
+}
+
+livelike-progress[image] {
+  margin-top: 5px;
+}
+
+.cheer-image-container {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+livelike-widget-footer .sponsorship {
+  background: var(--brand-secondary-background);
+  padding: 10px 15px 15px 15px;
+  font-family: var(--primary-font);
+}
+
+livelike-option[disabled] .livelike-voting-image-container,
+livelike-image-poll
+  livelike-widget-root[changed]
+  livelike-option
+  .livelike-voting-image-container {
+  align-items: unset;
+}
+
+.loading-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.sub-text-empty {
+  font-size: 14px;
+  color: var(--brand-text);
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+
+@media screen and (max-width: 600px) {
+  lg-image-prediction livelike-description,
+  livelike-image-poll livelike-description,
+  lg-prediction-followup-widget livelike-description,
+  livelike-image-prediction-follow-up livelike-description {
+    width: 174px;
+  }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+}
+
+input[type="range"]::-ms-thumb {
+  display: none;
+}
+
+livelike-widgets[disabled] {
+  display: none;
+}
+
+.empty-widgets {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white);
+  font-family: var(--primary-font);
+  line-height: 22px;
+  background-color: var(--brand-tabs-background-color);
+}
+.empty-widgets span {
+  max-width: 273px;
+}
+
+lg-image-poll livelike-footer button:focus,
+lg-text-quiz livelike-footer button:focus,
+lg-image-prediction livelike-footer button:focus,
+lg-text-poll livelike-footer button:focus {
+  outline: none;
+}
+
+livelike-widgets > *:last-child {
+  margin-bottom: 20px;
+}
+
+livelike-social-embed {
+  background: var(--brand-chat-delete-modal-background);
+  border-radius: 4px;
+}
+
+livelike-social-embed livelike-widget-header {
+  padding-left: 16px;
+}
+
+livelike-social-embed .slider-wrapper * {
+  border-radius: 11px;
+  margin: 0px !important;
+}
+
+livelike-social-embed livelike-widget-body {
+  background: transparent;
+  padding: 0px 16px 24px 16px;
+}
+
+livelike-widget-root livelike-widget-header.widget-header {
+  background: transparent;
+}
+
+.new-widget-top-line-container,
+.new-widget-bottom-line-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+unseen-widget-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+unseen-widget-line .line {
+  flex: 1;
+  height: 2px;
+  border-radius: 4px;
+}
+
+unseen-widget-line[type="top"] .line,
+unseen-widget-line[type="bottom"] .line {
+  background: #d9d9d9;
+}
+
+unseen-widget-line .label {
+  color: #dc314e;
+  margin-left: 5px;
+  font-family: Bai Jamjuree;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+livelike-social-embed livelike-widget-body iframe {
+  width: 100%;
+  height: 100%;
+}

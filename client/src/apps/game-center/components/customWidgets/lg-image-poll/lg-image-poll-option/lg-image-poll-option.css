@@ -1,0 +1,52 @@
+lg-image-poll-option[selected] {
+  border: 2px solid #225696;
+}
+
+lg-image-poll-option[selected] livelike-description[selected] {
+  opacity: 1;
+}
+
+lg-image-poll-option {
+  background: #F8F4F1;
+  box-shadow: 0 0 0 1px transparent inset;
+  overflow: hidden;
+  display: flex;
+  column-gap: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 50px;
+  border: 2px solid #F8F4F1;
+  transition: border ease 0.3s;
+}
+lg-image-poll-option:hover:not([disabled]) {
+  border: 2px solid #225696;
+}
+lg-image-poll-option livelike-image img {
+  height: 48px;
+  width: 48px;
+}
+lg-image-poll-option .livelike-voting-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+}
+
+lg-image-poll-option .livelike-voting-image-container livelike-description {
+  color: #02235C;
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Bai Jamjuree";
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+lg-image-poll-option livelike-percentage {
+  display: none;
+}
+
+lg-image-poll-option[disabled] {
+  cursor: not-allowed;
+}

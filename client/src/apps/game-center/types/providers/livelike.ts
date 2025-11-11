@@ -1,0 +1,96 @@
+interface ILeaderboardPayload {
+  id: string;
+  client_id: string;
+  name: string;
+  is_locked: boolean;
+  reward_item_id: string;
+  url: string;
+  entries_url: string;
+  entry_detail_url_template: string;
+}
+
+export interface ProgramResults {
+  active_sessions_statistics_url: string;
+  application_url: string;
+  ban_url: string;
+  banned_chat_users_url: string;
+  chat_enabled: boolean;
+  chat_rooms: [];
+  client_id: string;
+  created_at: string | undefined;
+  current_active_session_count: number;
+  custom_id: string | null;
+  default_chat_room: { id: string };
+  delete_widgets_url: string;
+  id: string;
+  leaderboard_url: string;
+  leaderboards: ILeaderboardPayload[];
+  moderation_url: string;
+  oembed_url: string;
+  pubnub_enabled: boolean;
+  queue_order_url: string;
+  rank_url: string;
+  reaction_packs_url: string;
+  report_url: string;
+  reward_items: [];
+  rewards_type: string;
+  scheduled_at: string;
+  sendbird_channel: null;
+  sponsors: [];
+  sponsors_url: string;
+  start_program_url: string;
+  started_at: string;
+  statistics_channel: string;
+  status: string;
+  sticker_packs_url: string;
+  stop_program_url: string;
+  stopped_at: null;
+  stream_url: string;
+  subscribe_channel: string;
+  sync_channel: null;
+  sync_sessions_url: string;
+  timeline_url: string;
+  title: string;
+  unclaimed_widget_interactions_url_template: string;
+  update_sticker_packs_url: string;
+  url: string;
+  widget_count: number;
+  widget_interactions_url_template: string;
+  widget_reaction_packs_url: string;
+  widgets_enabled: boolean;
+  widgets_url: string;
+  custom_data: any;
+  attributes: { key: string; value: string }[];
+}
+
+export interface ILeaderboardRankPayload {
+  profile_id: string;
+  rank: number;
+  profile_nickname: string;
+  score: number;
+}
+
+export interface IUserProfile {
+  access_token: string;
+  created_at: string;
+  id: string;
+  nickname: string;
+  reported_count: number;
+  custom_data: string | null;
+  blockList?: string[] | null;
+  reactions?: any;
+  url: string;
+  points: number;
+  badges: any;
+  subscribe_channel: string;
+  chat_room_memberships_url: string | null;
+  badges_url: string;
+  badge_progress_url: string;
+  reward_item_balances_url: string | null;
+  reward_item_transfer_url: string | null;
+  block_profile_url: string;
+  blocked_profiles_template_url: string;
+  blocked_profile_ids_url: string;
+  leaderboards_url: string;
+  leaderboard_views_url: string;
+}

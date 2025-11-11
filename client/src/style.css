@@ -1,0 +1,146 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --alt-bg-color:  #6423E1;
+  --brand-primary: #000D4C;
+  --brand-primary-dark: #000938 ;
+  --brand-secondary: #FFE100;
+  --brand-tertiary: #cf2e25;
+  --brand-earn: #0a8446;
+  --brand-text: var(--white);
+  --brand-primary-background: var(--white);
+  --brand-color-tabs: #333;
+  --brand-tabs-color-selected: #00438c;
+  --brand-game-center-text: #1a2235;
+  --brand-widgets-background: #fdf6ff;
+  --brand-selected: #013b73;
+  --brand-footer-background: #cadfff;
+  --brand-progress-color: #4f4f4f;
+  --brand-submit-color: #777;
+  --brand-disabled: #d4d4d4;
+  --brand-widget-border: rgba(161, 161, 161, 0.4);
+  --brand-correct: #3dcf25;
+  --brand-wrong: #971518;
+  --brand-predictor-blue: #012378;
+  --dropdown-background: #101010;
+  --brand-grey: #808080;
+  --brand-border: #e4e4e4;
+  --brand-purple: var(--alt-bg-color);
+  --brand-thumb: #1a2235;
+  --brand-header-background: #0E0E0E;
+  --brand-welcome-page-button-color: #DC314E;
+
+  --highlight-color: #ff6600;
+  --highlight-gradient: linear-gradient(180deg, #ff7c43 -2.31%, #ff4200 85.92%);
+  --quest-text-color: #10213d;
+  --reward-text-color: #142542;
+  --primary-color: #002d72;
+  --border-color: #ffffff2e;
+  --modal-bg-color: rgba(0, 0, 0, 0.4);
+  --gray-bg-color: #efefef;
+
+  --primary-background-timeline: rgba(30, 30, 30, 0.6);
+  --secondary-background-timeline: #4f4f4f;
+  --ternary-background-timeline: #971518;
+  --quaternary-background-timeline: #3dcf25;
+  --quinary-background-timeline: #505760;
+  --senary-background-timeline: rgba(79, 79, 79, 0.5);
+  --disabled-background-timeline: #d4d4d4;
+  --primary-text-timeline: #fff;
+  --disabled-text-timeline: #777777;
+  --brand-widget-button: #DC314E;
+  --brand-chat-delete-modal-background: #181818;
+  --brand-tabs-border-bottom-color: #242424;
+
+
+  --navy-team-bg: #00528f;
+  --red-team-bg: #e53238;
+  --tan-team-bg: #bc9e53;
+
+  --brand-secondary-background: #ededef;
+
+  font-family: Bai Jamjuree;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--brand-text);
+  background: var(--black);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+mets-game-center-app,
+mets-connect,
+lit-router,
+mets-wallet {
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 500px;
+  background: var(--brand-primary-background);
+}
+
+mets-quests-and-rewards-app {
+  overflow-y: auto;
+}
+
+.ny-mets-app {
+  padding: 0 15px;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+#outlet {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+mets-guess-the-word-app {
+  width: 100%;
+  background: var(--brand-primary-background);
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+ll-header,
+lg-leaderboard,
+ll-faq {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in-out forwards;
+}
+
+pl-play-predictor {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 500px;
+  background: var(--brand-primary);
+  color: var(--brand-primary);
+  scrollbar-width: none;
+}
+pl-play-predictor::-webkit-scrollbar {
+  display: none;
+}

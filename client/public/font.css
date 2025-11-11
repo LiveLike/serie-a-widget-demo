@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/BaiJamjuree-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/BaiJamjuree-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/BaiJamjuree-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/BaiJamjuree-Bold.ttf") format("truetype");
+}
