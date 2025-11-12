@@ -102,13 +102,15 @@ lg-tabs {
 
 .game-center {
   display: flex;
-  height: calc(100dvh - 48px);
+  height: 100dvh;
   flex-direction: column;
   min-width: 320px;
   max-width: 600px;
   width: 100%;
   overflow: hidden;
   background: var(--brand-tabs-background-color);
+  gap: 10px;
+  overflow-y: scroll;
 }
 .element::-webkit-scrollbar {
   display: none;

@@ -1,9 +1,9 @@
-import "./lg-image-poll-option.css";
+import "./image-poll-option.css";
 
 import { LiveLikeOption } from "@livelike/engagementsdk";
 const html = (window as any).html;
 
-class LGImagePollOption extends LiveLikeOption {
+class ImagePollOption extends LiveLikeOption {
   @((window as any).property({ type: Function }))
   setOptionSelected: (arg: {}) => void = () => {};
 
@@ -13,7 +13,7 @@ class LGImagePollOption extends LiveLikeOption {
   optionSelected = () => {
     if (this.disabled) return;
     this.parentElement
-      .querySelectorAll("lg-image-poll-option")
+      .querySelectorAll("image-poll-option")
       .forEach((el: any) => {
         el !== this && (el.selected = false);
       });
@@ -44,4 +44,4 @@ class LGImagePollOption extends LiveLikeOption {
     `;
   }
 }
-customElements.define("lg-image-poll-option", LGImagePollOption as any);
+customElements.define("image-poll-option", ImagePollOption as any);

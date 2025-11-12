@@ -9,7 +9,9 @@ export default defineConfig({
     outDir: "../dist/client",
     emptyOutDir: true,
     rollupOptions: {
-      input: {},
+      input: {
+        "game-center": resolve(__dirname, "client/game-center.html"),
+      },
     },
   },
 });

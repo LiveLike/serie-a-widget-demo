@@ -1,1 +1,1 @@
-export * from "./lg-image-poll";
+export * from "./image-poll";

@@ -1,64 +1,27 @@
 import { html } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
-import { fetchProgramByAppType } from "../../api";
-import { ProgramResults } from "../../types";
+import { customElement } from "lit/decorators.js";
 import "./lg-game-center.css";
-import "../ui-loader";
-import "../lg-timeline"
 import { LivBase } from "../../../../Components/LivBase";
-
+import "../customWidgets/lg-image-poll";
+import "../customWidgets/lg-cheer-meter";
+import "../customWidgets/sa-circular-predictor";
 
 @customElement("lg-game-center")
 export class LGGameCenter extends LivBase {
-  @state() program?: ProgramResults;
-
-  @state() programLoading: boolean = true;
-
-  @property({ type: String }) programId: string = "";
-
-  async connectedCallback() {
-    super.connectedCallback();
-    try {
-      await this.getProgramDetails();
-    } catch (e: unknown) {
-      console.error("Error while Fetching Program: ", e);
-      this.error = true;
-    } finally {
-      this.programLoading = false;
-    }
-  }
-
-  async getProgramDetails() {
-    try {
-      const programResults = await fetchProgramByAppType({
-        status: "live",
-        title: "Three Widgets Testing",
-      });
-      this.programId=programResults?.results[0]?.id;
-    } catch (error) {
-      console.error("Error during getProgramDetails:", error);
-      this.retryFn = () => this.getProgramDetails();
-      this.error = true;
-    } finally {
-      this.programLoading = false;
-    }
-  }
-
-  renderLoader() {
-    return html`<ui-loader loadingLabel="Loading..."></ui-loader>`;
-  }
-
   renderContent() {
-    if (this.programLoading || this.loading) {
-      return this.renderLoader();
-    }
-
     return html`
       <div class="game-center">
-        <lg-timeline
-          programId=${this.programId}
-          .loading=${this.loading}
-        ></lg-timeline>
+        <image-poll
+          widgetid="84da4005-935e-4e53-8ac1-367b47454bac"
+          kind="image-poll"
+        ></image-poll>
+        <cheer-meter
+          widgetid="0119fa2a-5c32-40df-9cee-5672f9df811e"
+          kind="cheer-meter"
+        ></cheer-meter>
+        <sa-circular-predictor
+          widgetid="0be90515-804a-453a-a702-2f2c6382c663"
+        ></sa-circular-predictor>
       </div>
     `;
   }

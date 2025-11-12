@@ -9,7 +9,7 @@ class Loader extends LitElement {
   render() {
     return html`
       <div class="ui-loader-container">
-        <img src=${"/serie-loader.svg"} alt="loader" class="ui-loader-main" />
+        <img src=${"/serie-a-logo.svg"} alt="loader" class="ui-loader-main" />
       </div>
     `;
   }

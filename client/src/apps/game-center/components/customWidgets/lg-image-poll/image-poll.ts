@@ -1,11 +1,10 @@
-import "./lg-image-poll-option";
-import "./lg-image-poll.css";
-
+import "./image-poll-option";
+import "./image-poll.css";
 import { LiveLikePoll } from "@livelike/engagementsdk";
 const html = (window as any).html;
 const predictionVotesImagePoll = {};
 
-class LGImagePoll extends LiveLikePoll {
+class ImagePoll extends LiveLikePoll {
   @((window as any).property({ type: Object })) optionSelected: Record<
     string,
     Object
@@ -21,7 +20,7 @@ class LGImagePoll extends LiveLikePoll {
   connectedCallback() {
     super.connectedCallback();
     this.isUserInteracted = !!this.interaction;
-    const interactiveUntil: string = this.widgetPayload.interactive_until;
+    const interactiveUntil: string = this.widgetPayload?.interactive_until;
     this.isExpired = interactiveUntil
       ? Date.now() > new Date(interactiveUntil).getTime()
       : false;
@@ -84,10 +83,8 @@ class LGImagePoll extends LiveLikePoll {
         : html`
             <livelike-select>
               <template>
-                <lg-image-poll-option
-                  .setOptionSelected=${this.setOptionSelected}
-                >
-                </lg-image-poll-option>
+                <image-poll-option .setOptionSelected=${this.setOptionSelected}>
+                </image-poll-option>
               </template>
             </livelike-select>
           `;
@@ -119,7 +116,6 @@ class LGImagePoll extends LiveLikePoll {
             ?disabled=${this.disabled}
           >
             ${renderSubmitBtnText()}
-          
           </button>
         </livelike-footer>
       `;
@@ -139,4 +135,4 @@ class LGImagePoll extends LiveLikePoll {
   }
 }
 
-customElements.define("lg-image-poll", LGImagePoll as any);
+customElements.define("image-poll", ImagePoll as any);

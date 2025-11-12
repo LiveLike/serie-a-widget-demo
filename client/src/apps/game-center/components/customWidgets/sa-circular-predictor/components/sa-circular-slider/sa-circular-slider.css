@@ -1,0 +1,38 @@
+:host {
+  display: inline-block;
+}
+
+svg {
+  overflow: visible;
+}
+tgl-ps-circular-slider {
+  width: 100%;
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-background {
+  fill: none;
+}
+.slider-progress {
+  fill: none;
+  transition: stroke-dasharray 0.3s ease;
+}
+.slider-handle {
+  cursor: pointer;
+}
+.slider-value {
+  color: #02235c;
+  text-align: center;
+  font-family: "Bai Jamjuree";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
